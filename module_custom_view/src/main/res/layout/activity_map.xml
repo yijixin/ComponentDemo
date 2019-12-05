@@ -5,21 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
+    tools:context=".MapActivity">
 
     <include layout="@layout/layout_toolbar_title"/>
 
-    <Button
-        android:id="@+id/btn_map"
+    <com.uidt.module_custom_view.custom.MapView
+        android:id="@+id/map_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="地图"/>
-
-    <com.uidt.module_custom_view.custom.ProgressView
-        android:id="@+id/progress_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

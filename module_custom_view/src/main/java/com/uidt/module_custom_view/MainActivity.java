@@ -3,6 +3,7 @@ package com.uidt.module_custom_view;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -29,6 +30,14 @@ public class MainActivity extends BaseActivity {
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("MainCustomView");
         setSupportActionBar(toolbar);
+
+        Button btnMap = findViewById(R.id.btn_map);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MapActivity.startAction(MainActivity.this);
+            }
+        });
 
         final ProgressView progressView = findViewById(R.id.progress_view);
         progressView.setMaxProgress(100);
