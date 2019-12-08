@@ -1,5 +1,6 @@
 package com.uidt.module_custom_view;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -10,6 +11,9 @@ import androidx.appcompat.widget.Toolbar;
 import com.uidt.common_base.base.BaseActivity;
 import com.uidt.module_custom_view.custom.ProgressView;
 
+/**
+ * 自定义View
+ */
 public class MainActivity extends BaseActivity {
 
     private Toolbar toolbar;
@@ -25,6 +29,7 @@ public class MainActivity extends BaseActivity {
         return toolbar;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void initViews(Bundle savedInstanceState) {
         toolbar = findViewById(R.id.toolbar);
@@ -36,6 +41,14 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 MapActivity.startAction(MainActivity.this);
+            }
+        });
+
+        Button btnVlayout = findViewById(R.id.btn_vlayout);
+        btnVlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VlayoutActivity.startAction(MainActivity.this);
             }
         });
 

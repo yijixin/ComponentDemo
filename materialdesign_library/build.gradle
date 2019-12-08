@@ -67,6 +67,5 @@ dependencies {
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0-rc01'
 
     implementation project(":common_base")
-    implementation 'com.google.android.material:material:1.2.0-alpha02'
 
 }

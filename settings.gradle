@@ -1,2 +1,2 @@
-include ':app', ':module_base_one', ':common_base', ':materialdesign_library', ':module_custom_view'
+include ':app', ':module_base_one', ':common_base', ':materialdesign_library', ':module_custom_view', ':algorithm_library'
 rootProject.name='ComponentDemo'

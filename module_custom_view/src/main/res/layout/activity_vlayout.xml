@@ -5,27 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".VlayoutActivity">
 
-
-    <include layout="@layout/layout_toolbar_title"/>
-
-    <Button
-        android:id="@+id/btn_map"
+    <ImageView
+        android:id="@+id/iv_title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="地图"/>
+        android:src="@mipmap/img_title_bar"
+        android:fitsSystemWindows="true"
+        android:scaleType="fitXY"/>
 
-    <Button
-        android:id="@+id/btn_vlayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="VLayout使用"/>
-
-    <com.uidt.module_custom_view.custom.ProgressView
-        android:id="@+id/progress_view"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_custom_vlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        />
 
 </LinearLayout>
