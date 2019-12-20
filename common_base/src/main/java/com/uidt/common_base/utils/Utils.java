@@ -2,6 +2,7 @@ package com.uidt.common_base.utils;
 
 import android.app.Activity;
 import android.os.Build;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.DisplayCutout;
 import android.view.View;
@@ -70,9 +71,10 @@ public class Utils {
     public static void setBelowBangs(View view, Activity activity) {
         if (view == null) {
             throw new RuntimeException("view not is null!");
-        }
-        if (Utils.hasFullScreen(activity)) {
-            view.setPadding(view.getPaddingLeft(), getHeightForDisplayCutout(activity), view.getPaddingRight(), view.getPaddingBottom());
+        } else {
+            if (Utils.hasFullScreen(activity)) {
+                view.setPadding(view.getPaddingLeft(), getHeightForDisplayCutout(activity), view.getPaddingRight(), view.getPaddingBottom());
+            }
         }
     }
 

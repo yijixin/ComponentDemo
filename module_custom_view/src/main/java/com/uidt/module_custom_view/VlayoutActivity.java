@@ -80,7 +80,6 @@ public class VlayoutActivity extends BaseActivity {
         //item类型
         viewPool.setMaxRecycledViews(0,10);
 
-
         //Banner区域
         BaseDelegateAdapter bannerAdapter = new BaseDelegateAdapter(this,new LinearLayoutHelper(),
                 R.layout.vlayout_banner,1,0){
@@ -241,6 +240,11 @@ public class VlayoutActivity extends BaseActivity {
         delegateAdapter.addAdapter(staggeredAdapter);
 
         recyclerView.setAdapter(delegateAdapter);
+
+    }
+
+    @Override
+    public void initPresenter() {
 
     }
 }

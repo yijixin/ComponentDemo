@@ -93,6 +93,11 @@ public class MaterialDesignActivity extends BaseActivity {
         });
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     private void updateSuspension() {
         //头像
         mSuspensionIv.setImageResource(getAvatarResource(mCurrentPosition));

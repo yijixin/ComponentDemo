@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MvpDemoActivity">
+
+    <data>
+        <variable
+            name="loginViewModel"
+            type="com.uidt.module_base_one.vm.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar_title" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{loginViewModel.userInfo.name}"
+            android:addTextChangedListener="@{loginViewModel.nameTextWatcher}"
+            android:hint="请输入账户"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:text="@{loginViewModel.userInfo.pwd}"
+            android:addTextChangedListener="@{loginViewModel.pwdTextWatcher}"
+            android:hint="请输入密码"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:onClick="@{loginViewModel.btnOnClickListener}"/>
+
+
+    </LinearLayout>
+
+</layout>

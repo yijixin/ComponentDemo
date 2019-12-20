@@ -1,6 +1,5 @@
-package com.uidt.module_custom_view;
+package com.uidt.module_base_one;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
@@ -10,10 +9,10 @@ import android.view.View;
 
 import com.uidt.common_base.base.BaseActivity;
 
-public class MapActivity extends BaseActivity {
+public class OtherActivity extends BaseActivity {
 
     public static void startAction(Activity activity) {
-        Intent intent = new Intent(activity,MapActivity.class);
+        Intent intent = new Intent(activity,OtherActivity.class);
         activity.startActivity(intent);
     }
 
@@ -21,7 +20,7 @@ public class MapActivity extends BaseActivity {
 
     @Override
     protected int layoutRes() {
-        return R.layout.activity_map;
+        return R.layout.activity_other;
     }
 
     @Override
@@ -32,10 +31,8 @@ public class MapActivity extends BaseActivity {
     @Override
     public void initViews(Bundle savedInstanceState) {
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("MapView");
+        toolbar.setTitle("Other");
         setSupportActionBar(toolbar);
-
-
     }
 
     @Override

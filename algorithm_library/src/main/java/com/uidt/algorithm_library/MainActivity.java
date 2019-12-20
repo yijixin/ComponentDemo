@@ -31,6 +31,11 @@ public class MainActivity extends BaseActivity {
         setSupportActionBar(toolbar);
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     public static void main(String[] args) {
         //单向链表测试
         OneLinkedTest();

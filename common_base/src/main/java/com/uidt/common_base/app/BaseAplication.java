@@ -1,6 +1,7 @@
 package com.uidt.common_base.app;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.uidt.common_base.BuildConfig;
@@ -9,6 +10,9 @@ import com.uidt.common_base.BuildConfig;
  * @author yijixin on 2019-11-29
  */
 public class BaseAplication extends Application {
+
+    private static BaseAplication appAplication;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -18,5 +22,11 @@ public class BaseAplication extends Application {
         }
         // 尽可能早，推荐在Application中初始化
         ARouter.init(this);
+
+        appAplication = this;
+    }
+
+    public static Context getAppContext() {
+        return appAplication;
     }
 }
